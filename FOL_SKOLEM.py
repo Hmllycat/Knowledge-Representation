@@ -151,6 +151,18 @@ def skl(theory):
 
 # In[ ]:
 
-
+def my_parser():
+    
+    print("PLEASE ENTER YOUR SIGNATURE:\n")
+    const = input("please enter your constant\nfor example: [a, b]\n")
+    func = input("please enter your function\nfor example: {f: 2, g: 1}\n")
+    rela = input("please enter your relation\nfor example: {P: 1, Q: 2}\n")
+    signature = {"function": func, "constant": const, "relation": rela}
+    theory = input("PLEASE ENTER YOUR THEARY:\n")
+    knowledge_base = skl(theory)
+    print(check_signature(theory, signature))
+    print(knowledge_base)
+   
+my_parser()
 
 
