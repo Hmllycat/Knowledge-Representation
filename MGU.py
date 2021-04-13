@@ -43,8 +43,8 @@ def mgu(P, Q):
 # In[114]:
 
 
-P = "P(g(z),f(a,z))"
-Q = "P(y,f(x,y))"
+P = input("Please enter your first predicate, for example: P(g(z),f(a,z))")
+Q = input("Please enter your first predicate, for example: P(y,f(x,y))")
 mgu(P,Q)
 
 
