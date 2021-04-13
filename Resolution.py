@@ -84,7 +84,7 @@ def resolution(query):
 # In[11]:
 
 
-query = "EXISTS(x, ENTAIL(D(x), FORALL(y, D(y))))"
+query = input("Please enter your theory: for example: EXISTS(x, ENTAIL(D(x), FORALL(y, D(y))))")
 result = resolution(query)
 print(result)
 
