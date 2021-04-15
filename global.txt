@@ -1,0 +1,10 @@
+# how to write a thery, for example: theory "∃x(D(x) ==> ∀yD(y))" can be represented as"EXISTS(x, ENTAIL(D(x), FORALL(y, D(y))))"
+
+"not()" = "~"
+"ad(, )" = "&"
+"or(, )" = "|"
+"ENTAIL" = "==>"
+
+"FORALL(, )" = "∀"
+"EXISTS(, )" = "∃"
+
