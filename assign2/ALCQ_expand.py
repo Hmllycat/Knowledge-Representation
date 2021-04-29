@@ -5,7 +5,7 @@
 
 
 from treelib import Tree, Node
-from NNF.py import check
+from NNF import check
 
 
 # In[ ]:
