@@ -28,7 +28,6 @@ this project implements a First-order Logic resolution program. That includes a 
 - `NNF.py`: form a NNF for each ABox.
 - `ALCQ_expand.py`: defines 7 expand rules
 - `test.py`: reduce TBox, convert subsumption problem into NNF and prove given ABox whether consistent. I used third question and fouth question as a testset and prove those two subsumptions are valid with empty TBox, and joe ABox is consistent if those three child names represent the same individule. YOU CAN DIRECTLY RUN IT ON YOUR DATASET.
-
-## Template
+- `global.txt`: defines operaters when forming questions.
 
 
