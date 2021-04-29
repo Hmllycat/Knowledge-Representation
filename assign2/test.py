@@ -6,6 +6,7 @@
 
 from treelib import Tree, Node
 from ALCQ_expand import expand
+from NNF import nnf
 
 
 # In[ ]:
