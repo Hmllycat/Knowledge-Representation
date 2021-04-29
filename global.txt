@@ -8,3 +8,5 @@
 "FORALL(, )" = "∀"
 "EXISTS(, )" = "∃"
 
+" BELONGto " = "⊑"
+for TBox, use "≡"
