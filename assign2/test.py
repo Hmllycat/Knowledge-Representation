@@ -5,8 +5,7 @@
 
 
 from treelib import Tree, Node
-from ALCQ_expand.py import expand
-from NNF.py import check, nnf
+from ALCQ_expand import expand
 
 
 # In[ ]:
