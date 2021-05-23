@@ -1,0 +1,1 @@
+H(joe, ann)	H(joe, eva)	H(joe, mary)	P.T(joe)	T(ann)	T(eva)	T(mary)	T(joe)
