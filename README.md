@@ -31,7 +31,7 @@ this project implements a First-order Logic resolution program. That includes a 
 - `global.txt`: defines operaters when forming questions.
 
 ## Example
-# Check consistency
+## Check consistency
 ABox is ["H(joe, ann)", "H(joe, eva)", "H(joe, mary)", "P.T(joe)", "T(ann)", "T(eva)", "T(mary)", "T(joe)"], TBox is ["P≡<=2H"].
 We want to check our ABox for consistency and find a corresponding model (if such exists). For this, we convert ABox in a way that is described in input format section:
 `H(joe, ann)	H(joe, eva)	H(joe, mary)	P.T(joe)	T(ann)	T(eva)	T(mary)	T(joe)`
@@ -39,7 +39,7 @@ We want to check our ABox for consistency and find a corresponding model (if suc
 After that we run the reasoner with following command:
 `python test.py ABox1.txt TBox1.txt`
 
-# Checking subsumption
+## Checking subsumption
 We want to check consistency of the following subsumption with respect to an empty TBox:
 `∀r.∀s.A ⊓ ∃r.∀s.B ⊓ ∀r.∃s.C ⊑ ∃r.∃s.(A ⊓ B ⊓ C)`
 we convert theory in a way that is described in input format section:
