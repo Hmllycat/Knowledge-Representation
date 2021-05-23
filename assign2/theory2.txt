@@ -1,0 +1,1 @@
+ad(FORALL(r, FORALL(s, A)), or(EXISTS(r, FORALL(s, not(A))), FORALL(r, EXISTS(s, B)))) BELONGto or(FORALL(r, EXISTS(s, ad(A, B))), EXISTS(r, FORALL(s, not(B))))
