@@ -7,6 +7,10 @@
 from treelib import Tree, Node
 from ALCQ_expand import expand
 from NNF import nnf
+import sys
+
+arg=sys.argv
+num=len(arg)
 
 
 # In[ ]:
@@ -92,27 +96,28 @@ def tableau(ABox, TBox):
 # In[ ]:
 
 
-ABox = ["H(joe, ann)", "H(joe, eva)", "H(joe, mary)", "P.T(joe)", "T(ann)", "T(eva)", "T(mary)", "T(joe)"]
-TBox = ["P≡<=2H"]
-tableau(ABox, TBox)
-
-
+def process(file):
+    
+    f = open(file)
+    boxes = f.readlines()
+    f.close()
+    box = boxes[0].replace("\n", '').split("\t")
+    return box
 # In[ ]:
 
 
-# ∀r.∀s.A ⊓ ∃r.∀s.B ⊓ ∀r.∃s.C ⊑ ∃r.∃s.(A ⊓ B ⊓ C)
-theory = "ad(FORALL(r, FORALL(s, A)), EXISTS(r, FORALL(s, B)), FORALL(r, EXISTS(s, C))) BELONGto EXISTS(r, EXISTS(s, ad(A, B, C)))"
-ABox = [subsu(theory)]
-TBox = ""
-tableau(ABox, TBox)
-
-
-# In[ ]:
-
-
-# ∀r.∀s.A ⊓ (∃r.∀s.¬A ⊔ ∀r.∃s.B) ⊑ ∀r.∃s.(A ⊓ B) ⊔ ∃r.∀s.¬B
-theory = "ad(FORALL(r, FORALL(s, A)), or(EXISTS(r, FORALL(s, not(A))), FORALL(r, EXISTS(s, B)))) BELONGto or(FORALL(r, EXISTS(s, ad(A, B))), EXISTS(r, FORALL(s, not(B))))"
-ABox = [subsu(theory)]
-TBox = ""
-tableau(ABox, TBox)
-
+if __name__ == "__main__":
+    
+    if num == 3:
+        ABox = process(arg[1])
+        TBox = process(arg[2])
+        print(tableau(ABox, TBox))
+    else:
+        f = open(arg[1])
+        file = f.readlines()
+        f.close()
+        theory = file[0].replace("\n", "")
+        ABox = [subsu(theory)]
+        TBox = ""
+        print(tableau(ABox, TBox))
+        
